@@ -23,5 +23,6 @@ public class SpringJdbcJpaApplication implements CommandLineRunner {
         logger.info("All users: {}", personJdbcDao.findAll());
         logger.info("10001: {}", personJdbcDao.findById(10001));
         logger.info("persons with Krishna as name: {}", personJdbcDao.findByName("Krishna"));
+        logger.info("Deleting 10002-> rows deleted: {}", personJdbcDao.deleteById(10002));
     }
 }
