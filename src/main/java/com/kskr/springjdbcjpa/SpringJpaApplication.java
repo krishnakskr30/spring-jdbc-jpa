@@ -24,8 +24,8 @@ public class SpringJpaApplication implements CommandLineRunner {
         logger.info("10001: {}", personJpaRepository.findById(10001));
 //        logger.info("persons with Krishna as name: {}", personJdbcDao.findByName("Krishna"));
 //        logger.info("Deleting 10002-> rows deleted: {}", personJdbcDao.deleteById(10002));
-//        logger.info("Inserting 10006-> rows inserted: {}", personJdbcDao.insert(new Person(10006, "KSKR", "JK", "2022-11-05 00:00:00"
-//        )));
-//        logger.info("Updating 10006-> rows updated: {}", personJdbcDao.update(new Person(10006, "Noob", "Noobistan", "2022-11-05 00:00:00")));
+        logger.info("Inserting new person-> rows inserted: {}", personJpaRepository.insert(new Person("KSKR", "JK", "2022-11-05 00:00:00")));
+        logger.info("Inserting new person-> rows inserted: {}", personJpaRepository.update(new Person(10001, "KSKR", "JK", "2022-11-05 00:00:00")));
+
     }
 }
