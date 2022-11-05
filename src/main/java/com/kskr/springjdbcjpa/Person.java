@@ -3,9 +3,11 @@ package com.kskr.springjdbcjpa;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 //@Table(name="person")
 @Entity
+@NamedQuery(name="find_all_persons",query="select p from Person p")
 public class Person {
     @Id
     @GeneratedValue
